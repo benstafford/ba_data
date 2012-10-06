@@ -2,7 +2,7 @@
   <div class="ten columns offset-by-two">
     <ul>
       <% @list.each do |beer| %>
-      <li><%= link_to beer.content, beer[:href] %></li>
+      <li><%= link_to beer[:name], beer[:href] %></li>
       <% end %>
     </ul>
   </div>

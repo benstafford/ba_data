@@ -2,15 +2,16 @@ class List
   include ::BeerAdvocate
 
   def self.all
-    #query to get <a> tags for all beer lists
+    #get all lists published on the site
     BeerAdvocate.fetch("/lists/popular").
-      search("//h3[text()='Lists']/following-sibling::li/a")
-
-    #each[:href] and each.content
+      search("//h3[text()='Lists']/following-sibling::li/a").
+      map { |item| { :href => item[:href], :name => item.content} }
   end
 
   def self.find(list)
+    #get all beers in a particular list
     BeerAdvocate::fetch("/lists/" + list).
-      search("//a[contains(@href, '/beer/profile')]")
+      search("//a[contains(@href, '/beer/profile')]").
+      map { |item| { :href => item[:href], :name => item.content} }
   end
 end
