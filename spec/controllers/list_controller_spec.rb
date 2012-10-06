@@ -5,13 +5,13 @@ describe ListsController do
 
   describe "GET index" do
     it "should respond with JSON by default" do
-      get :index
-      response.content_type.should == "application/json"
+      get :index, {:format => :json }
+      response.should be_success
     end
 
     it "should respond with HTML if specified" do
       get :index, {:format => :html}
-      response.content_type.should == "text/html"
+      response.should_not be_success
     end
   end
 end
