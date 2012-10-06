@@ -14,3 +14,4 @@ gem "factory_girl_rails", ">= 4.1.0", :group => [:development, :test]
 gem "compass-rails", ">= 1.0.3", :group => :assets
 gem "zurb-foundation", ">= 3.1.1", :group => :assets
 gem "hub", ">= 1.10.2", :require => nil, :group => [:development]
+gem "mechanize"
