@@ -1,8 +1,8 @@
 <div class="row">
   <div class="ten columns offset-by-two">
     <ul>
-      <% @lists.each do |list| %>
-      <li><%= link_to list.content, list[:href] %></li>
+      <% @list.each do |beer| %>
+      <li><%= link_to beer.content, beer[:href] %></li>
       <% end %>
     </ul>
   </div>
