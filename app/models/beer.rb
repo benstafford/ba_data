@@ -9,7 +9,7 @@ class Beer
       reviewers_rating = response.search("//td[text()[contains(., 'BA SCORE')]]/span").text
       brothers_rating = response.search("//td[text()[contains(., 'THE BROS')]]/span").text
 
-      if beer_name.includes?("404 Not Found")
+      if beer_name.include?("404 Not Found")
         return nil
       end
 
