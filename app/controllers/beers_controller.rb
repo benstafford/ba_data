@@ -3,6 +3,10 @@ class BeersController < ApplicationController
 
   def show
     @beer = Beer.find(params[:id])
-    respond_with(@beer)
+    if @beer
+      respond_with(@beer)
+    else
+      render :json => "Beer not found", :status => :unprocessable_entity
+    end
   end
 end
