@@ -11,7 +11,11 @@ class List
   def self.find(list)
     #get all beers in a particular list
     BeerAdvocate::fetch("/lists/" + list).
-      search("//a[contains(@href, '/beer/profile')]").
-      map { |item| { :href => item[:href], :name => item.content} }
+      search("//a[contains(@href, '/beer/profile')]/b/..").
+      map { |item| { :href => parameterize_profile_url(item[:href]), :name => item.content} }
+  end
+
+  def self.parameterize_profile_url(full_url)
+    full_url.gsub(/\/beer\/profile\//, '').gsub(/\//, '-')
   end
 end
