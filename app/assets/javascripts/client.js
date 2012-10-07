@@ -20,6 +20,7 @@ var getBeers = function(id) {
   $.getJSON('/lists/' + id, function(data) {
     var beers = [];
     $("#beers").html('');
+    $("#beer").html('');
     $.each(data, function(key,val) {
       $("#beers").append("<a href='#' class='beer_name' data-list-id='" + val.id + "'>" +
   val.name  + "</a><br />");
