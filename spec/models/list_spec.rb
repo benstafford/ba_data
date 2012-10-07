@@ -8,7 +8,7 @@ describe List do
     let(:request) { List.all }
 
     it "returns XML elements" do
-      request.first.class.should == Nokogiri::XML::Element
+      request.length.should be > 1
     end
   end
 
@@ -17,12 +17,7 @@ describe List do
     let(:request) { List.find(list) }
 
     it "returns XML elements" do
-      request.first.class.should == Nokogiri::XML::Element
+      request.length.should  be > 1
     end
-
-    it "returns results with beer/profile URLs" do
-      request.first[:href].should include("/beer/profile")
-    end
-
   end
 end
