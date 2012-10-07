@@ -14,20 +14,20 @@ Currently, the application can retrieve the current beer lists available on Beer
 
 #### Available methods: ####
 
-##### GET /lists #####  
+##### GET /lists  
 Returns JSON array of beer lists.  Each item in the JSON array includes:
 
 **id**: Beer list identifier  
 **name**: Beer list name  
 
-##### GET /lists/<id> #####  
+##### GET /lists/[id]   
 Returns JSON array of beers on a particular list.  The particular list is identified by the *id* parameter.
 
 Return values for each element in array:  
-**id*: Beer identifier  
+**id**: Beer identifier  
 **name**: Beer name  
 
-##### GET /beers/<id>#####  
+##### GET /beers/[id]   
 Returns details of the specific beer with JSON formatting.
 
 Required:  
