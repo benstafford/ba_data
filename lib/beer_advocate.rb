@@ -3,6 +3,12 @@ module BeerAdvocate
 
   def self.fetch(path)
     agent = Mechanize.new
-    agent.get(BASE_URL + path)
+    begin
+      agent.get(BASE_URL + path)
+    rescue  Mechanize::ResponseReadError => e
+      e.force_parse
+    rescue SocketError => e
+      "Connection Error"
+    end
   end
 end
