@@ -37,3 +37,7 @@ Returns:
 **beer_name**: Name of the beer along with brewery name  
 **reviewers_rating**: Beer rating as determined by user-submitted reviews  
 **brothers_rating**: If the Alstrom brothers have reviewed this particular beer, a numerical score is returned.  Otherwise, "N/A" is returned.
+
+### Sample Client Application ###
+
+There is a very simple Javascript-based client application that is available at /client.
