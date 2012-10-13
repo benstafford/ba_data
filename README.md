@@ -1,11 +1,9 @@
 Web Service to pull data from beeradvocate.com
 ========
 
-**Deployed to:** [http://damp-mesa-4600.herokuapp.com/](http://damp-mesa-4600.herokuapp.com/)
-
 ### Sample Client Application ###
 
-There is a very simple Javascript-based client application that is available at [http://damp-mesa-4600.herokuapp.com/client](http://damp-mesa-4600.herokuapp.com/client).
+There is a very simple Javascript-based client application that is available at /client
 
 ### Usage ###
 
